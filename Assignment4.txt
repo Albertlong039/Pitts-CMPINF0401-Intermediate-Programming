@@ -1,0 +1,7 @@
+MYSTERY #1: (1) output=951413 (2) Rounding output for each digit (backwards)
+MYSTERY #2 (1) output=23 (2) Rounding each digit of the number and then adding it up
+MYSTERY #3: (1) output=23 (2) Adding up all the variables in the array
+MYSTERY #4: (1) output=RETURNED FALSE (2) Tryting to test the array if it's keeping increasing
+MYSTERY #5: (1) output=5 4 3 2 1 (2) Print the n to 1(in desending oder)
+MYSTERY #6: (1) output=1 2 3 4 5 (2) Print the 1 to n(in ascending oder)
+MYSTERY #7: (1) output=5 4 3 2 1 1 2 3 4 5 (2) Print the n to 1(in desending oder first and ascending 1 to n again)
