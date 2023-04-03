@@ -1,0 +1,70 @@
+Lab 10
+
+Using Source code from 'objectcollections' and 'inheritance' code sample as starting point.
+
+Modofications to existing classes.
+Vehicle Class -
+new String datafield for 'make', the manufacturer of the vehicle
+Getter and Setter method for that field. Setter must implement toUpperCase(identical to what you did in Lab 9)
+- You could use the Vehicle.java class from Lab 9 for this as long as its complete.
+
+Sub Classes using Inheritance - You will build these.
+
+Car.java - use the code sample from 'inheritance' code sample for this. 
+This class inherits all the datafields and methods from its Superclass Vehicle(see its top line and its use of extends)
+It will have a unique datafield for seating, an int value.
+Its stats() method is an override method of the superclass's stats() as it needs to output different info than its superclass 
+YOU WILL NEED TO ADD A LINE TO OUTPUT 'make' FOR THIS OVERRIDE! 
+
+Truck.java will extend the vehicle class.
+It will have an added datafield 'hauling' as an int to indicate how much weight it can haul
+It will have an added datafield for 'seating' same as Car does.
+Both of these datafields will need Getter and Setter methods for them. No data checking is needed, they just store or get the values supplied
+Override method for stats() from Vehicle. It needs to output all info from Vehicle AND its 2 extra datafields
+
+Motorcycle.java will extend the vehicle class.
+No additional datafields. 
+2 OVERRIDE methods.
+getweight()
+setweight(int in) - no weight check for this vehicle, just take the value in and store it. Why? Remember we said a vehicle(we assumed a base of a Car
+couldnt be less than 1000lbs, well since we are making different vehicle classes a motorcycle is rarely over 1000lbs. Most are between 200-500lbs
+
+_________________________________________
+Fleet.java
+
+This version of fleet will require an almost total rewrite from previous versions so you may want to just clear out its main method.
+Declare an ArrayList of the Vehicle class --- see 'objectcollection' code sample.
+Declare a Scanner object and connect it to the keyboard.
+Prompt the user how many cars they intend to enter into the program, store those in a 'count' variable.
+while (count >0)
+BEGIN LOOP BODY
+Prompt user "What type of vehicle are you entering? (1: Car, 2: Truck, 3: Motorcycle)" - store their input into 'type'
+Use a simple if test structure for type being 1,2,or 3
+IF TEST BLOCK
+If type 1(its a car)
+Create a Car object from the Car class, remember these will have the default BASE constructor by default meaning for Car,Truck, and Motorcycle we
+will need to call the setter methods to set the values - unless you CHOOSE to make a OVERLOAD constructor - which isnt required.
+Prompt the user for EACH of these fields individually(make,model,weight,color,year,MPG and seating)
+You can do it combined:
+System.out.println("What is the make?");
+mycar.setMake(input.next());
+After you have populated all fields of object, add that car to the ArrayList you declared above.
+Same structure for else if test for type == 2(its a truck), populate all its needed fields, remember they are slightly different for each type of vehicle!
+Same structure for else or else if for type ==3(its a motorcycle)
+
+END OF IF TEST BLOCK
+decrement 'count' //this controls the loop
+
+END LOOP BODY
+After the loop loads the arraylist with all vehicles, announce it will now display them all:
+System.out.println("Now we will go through all objects created from the superclass Vehicle");
+Use an enhance for loop to process through all vehicles' .stats() method.
+
+What do we hand in? A screenshot showing output from the for loop. Make sure to add at least 1 vehicle of each sub class. You can make up your own data
+as long as 1 of each is represented.
+This assignment will generate many java files - all will need to be submitted.
+Fleet.java
+Vehicle.java
+Car.java
+Truck.java
+Motorcycle.java
